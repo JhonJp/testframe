@@ -1,0 +1,60 @@
+/* Your app styles here */
+.topnav_inner{
+    height: 20%;
+    width: 100%;
+    background: #2196f3;
+    color: #fff;
+}
+
+.topnav_inner_txt{
+    font-style: normal;
+    font-size: 25px;
+    margin: 0 16px;
+    line-height: 5.2;
+    text-align: center;
+}
+
+.block_title_head{
+    color: rgba(0,0,0,.54);
+    margin: 15px 15px 15px;
+    line-height: 16px;
+    font-weight: 500;
+}
+
+.popup{
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    top: 50px;
+    width: 90%;
+    height: 60%;
+    display: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition-property: -webkit-transform;
+    transition-property: -webkit-transform;
+    transition-property: transform;
+    transition-property: transform,-webkit-transform;
+    -webkit-transform: translate3d(0,100%,0);
+    transform: translate3d(0,100%,0);
+    background: #fff;
+    z-index: 11000;
+}
+
+.popimg{
+    margin: 0px 10px 0px 10px;
+}
+
+.space{
+    width: 40%;
+}
+
+.demo-card-header-pic .card-header {
+    height: 40vw;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+  }
+  .demo-card-header-pic .card-content-padding .date{
+    color: #8e8e93;
+  }

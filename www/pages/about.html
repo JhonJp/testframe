@@ -1,0 +1,53 @@
+<template>
+  <div class="page" data-name="about">
+    <div class="navbar">
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="#" class="link back">
+            <i class="icon icon-back"></i>
+            <span class="ios-only">Back</span>
+          </a>
+        </div>
+        <div class="title">About</div>
+      </div>
+    </div>
+    <div class="page-content">
+      <div class="card demo-card-header-pic">
+          <div style="background-image:url(img/blue-logi.jpg)" class="card-header align-items-flex-end">
+            GP EXPRESS CARGO</div>
+          <div class="card-content card-content-padding" style="text-align:justify;">
+            <p class="date">What is GP EXPRESS?</p>
+            <p>
+              <i>"Kabayan, ang padala mo ay garantisadong mura na, mabilis pa"</i>
+            </p>
+            {{#each messages}}
+            <p>
+                {{this}}
+            </p>
+            {{/each}}
+          </div>
+          <div class="card-footer"></div>
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+  return {
+    // Component Data
+    data: function () {
+      // Must return an object
+      return {
+        messages: [
+          'GP Express Cargo has always been the herald of change. Now on its 21th year of serving the International Filipino Community and partner of an economy-building industry',
+           'GP\'s will to serve with as much dedication as its founder, has never wanted. From a Peso remittance service in its younger years, later on added cargo delivery to its door-to-door service.',
+            'Its computerized and round-the-clock service is an assurance of fast and reliable door-to-door delivery of remittance or balikbayan box, 24 hours a day, seven days a week, 365 days a year.',
+          'At present, it serves 22 countries all over the world and has provincial branches in almost all the regions of the Philippines. Proof of the company\'s commitment to serve the overseas Filipino community.'
+        ],
+      }
+    },
+    // Component Methods
+    methods: {},
+    // Page Events
+    on: {}
+  }
+</script>
