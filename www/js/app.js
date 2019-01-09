@@ -17,7 +17,18 @@ var app  = new Framework7({
     };
   },
   // App root methods
-  methods: {},
+  methods: {
+    signUp: function () {
+      var usern = $$('#usern').val();
+      var pwd = $$('#pwd').val();
+      app.dialog.alert('Username: '+usern+'<br> Password: '+pwd,'Login form');
+    },
+    signIn: function () {
+        var usern = $$('#usern').val();
+        var pwd = $$('#pwd').val();
+        app.dialog.alert('Username: '+usern+'<br> Password: '+pwd,'Login form');
+    },
+  },
   // App routes
   routes: routes,
 });
@@ -25,6 +36,22 @@ var app  = new Framework7({
 // Init/Create main view
 var mainView = app.views.create('.view-main', {
   url: '/',
+});
+
+$$('#signUp').on('click', function () {
+  var username = $$('#usern').val();
+  var password = $$('#pwd').val();
+  
+  // Alert username and password
+  app.dialog.alert('Username: ' + username + '<br>Password: ' + password);
+});
+
+$$('#signIn').on('click', function () {
+  var username = $$('#usern').val();
+  var password = $$('#pwd').val();
+
+  // Alert username and password
+  app.dialog.alert('Username: ' + username + '<br>Password: ' + password);
 });
 
 

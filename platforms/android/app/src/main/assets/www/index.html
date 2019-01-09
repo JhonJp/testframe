@@ -53,13 +53,6 @@
                       </div>
                     </a>
                   </li>
-                  <li>
-                    <a href="/login/" class="item-content item-link panel-close">
-                      <div class="item-inner">
-                        <div class="item-title">Login</div>
-                      </div>
-                    </a>
-                  </li>
                 </ul>
               </div>
           </div>
@@ -84,95 +77,49 @@
         </div>
         <!-- Scrollable page content-->
         <div class="page-content">
-          <div class="card demo-card-header-pic">
-              <div style="background-image:url(img/blue-logi.jpg)" class="card-header align-items-flex-end">
-                GP EXPRESS CARGO</div>
-              <div class="card-content card-content-padding" style="text-align:justify;">
-                <p class="date">What is GP EXPRESS?</p>
-                <p>
-                  <i>"Kabayan, ang padala mo ay garantisadong mura na, mabilis pa"</i>
-                </p>
-                <p>
-                  GP Express Cargo has always been the herald of change. 
-                  Now on its 21th year of serving the International Filipino 
-                  Community and partner of an economy-building industry, 
-                </p>
-              <div class="card-footer">
-                  <button class="button"><a href="/about/" class="link">Read More</a></button>
-              </div>
+          <div class="page">
+            <!-- start form -->
+            <div class="page-content block">
+                <div class="login-screen-title"><b>GP EXPRESS</b></div>
+                <form>
+                    <div class="list">
+                        <ul>
+                          <li class="item-content item-input">
+                          <div class="item-inner">
+                              <div class="item-title item-label">Username</div>
+                              <div class="item-input-wrap">
+                              <input type="text" name="username" placeholder="Your username" id="usern">
+                              </div>
+                          </div>
+                          </li>
+                          <li class="item-content item-input">
+                          <div class="item-inner">
+                              <div class="item-title item-label">Password</div>
+                              <div class="item-input-wrap">
+                              <input type="password" name="password" placeholder="Your password" id="pwd">
+                              </div>
+                          </div>
+                          </li>
+                          <li class="item-content item-input">
+                              <div class="item-inner">
+                                  <p class="justify-content-center">
+                                    You give us consent on the informations that you have provided during the time that you sign up in our system.    
+                                  </p>
+                              </div>
+                          </li>
+                        </ul>
+                    </div>
+                    <div class="segmented segmented-raised">
+                        <a class="button button-fill color-red" id="signUp">
+                            Sign Up
+                        </a>
+                        <a class="button button-fill color-blue" @click="signIn">
+                            Sign In
+                        </a>
+                    </div>
+                </form>
             </div>
-          </div>
-          <div class="block-title">News and Activities</div>
-          <div class="list">
-            <ul>
-              <li class="accordion-item"><a href="#" class="item-content item-link">
-                  <div class="item-inner">
-                    <div class="item-title">Activity 1</div>
-                  </div></a>
-                <div class="accordion-item-content">
-                  <div class="block">
-                    <p>Event will be 
-                      triggered right before accordion content starts its 
-                      closing animation. prevent contains function that will prevent accordion
-                       from closing when called</p>
-                  </div>
-                </div>
-              </li>
-              <li class="accordion-item"><a href="#" class="item-content item-link">
-                  <div class="item-inner">
-                    <div class="item-title">Activity 2</div>
-                  </div></a>
-                <div class="accordion-item-content">
-                  <div class="block">
-                      <p>Event will be 
-                          triggered right before accordion content starts its 
-                          closing animation. prevent contains function that will prevent accordion
-                           from closing when called</p>
-                  </div>
-                </div>
-              </li>
-              <li class="accordion-item"><a href="#" class="item-content item-link">
-                  <div class="item-inner">
-                    <div class="item-title">Activity 3</div>
-                  </div></a>
-                <div class="accordion-item-content">
-                  <div class="block">
-                      <p>Event will be 
-                          triggered right before accordion content starts its 
-                          closing animation. prevent contains function that will prevent accordion
-                           from closing when called</p>
-                  </div>
-                </div>
-              </li>
-              <li class="accordion-item"><a href="#" class="item-content item-link">
-                <div class="item-inner">
-                  <div class="item-title">Activity 4</div>
-                </div></a>
-                <div class="accordion-item-content">
-                  <div class="block">
-                      <p>Event will be 
-                          triggered right before accordion content starts its 
-                          closing animation. prevent contains function that will prevent accordion
-                          from closing when called</p>
-                  </div>
-                </div>
-              </li>
-              <li class="accordion-item"><a href="#" class="item-content item-link">
-                <div class="item-inner">
-                  <div class="item-title">Activity 5</div>
-                </div></a>
-                <div class="accordion-item-content">
-                  <div class="block">
-                      <p>Event will be 
-                          triggered right before accordion content starts its 
-                          closing animation. prevent contains function that will prevent accordion
-                          from closing when called</p>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-
+        </div>
           <!-- 
             <div class="block-title searchbar-hide-on-search">Page Loaders & Router</div>
           <div class="list links-list searchbar-hide-on-search">
@@ -200,7 +147,7 @@
     </div>
 
     <!-- Popup -->
-    <div class="popup block-popup" id="my-popup">
+    <!-- <div class="popup block-popup" id="my-popup">
       <div class="view">
         <div class="page">
           <div class="navbar">
@@ -220,10 +167,10 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- Login Screen -->
-    <div class="login-screen" id="my-login-screen">
+    <!-- <div class="login-screen" id="my-login-screen">
       <div class="view">
         <div class="page">
           <div class="page-content login-screen-content">
@@ -259,7 +206,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
   <!-- Cordova -->
   <!--

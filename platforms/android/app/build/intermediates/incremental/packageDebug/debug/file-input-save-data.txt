@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Wed Jan 09 09:31:57 SGT 2019
+#Wed Jan 09 10:42:24 SGT 2019
 56.path=www/pages/page-loader-template7.html
 5.base=C\:\\Users\\Admin\\Desktop\\cordovaApp\\frameWorkSeven\\platforms\\android\\app\\build\\intermediates\\assets\\debug
 42.base=C\:\\Users\\Admin\\Desktop\\cordovaApp\\frameWorkSeven\\platforms\\android\\app\\build\\intermediates\\assets\\debug
