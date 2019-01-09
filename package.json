@@ -4,7 +4,7 @@
   "description": "",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JhonJp/myprojects.git"
+    "url": "git+https://github.com/JhonJp/testframe.git"
   },
   "scripts": {
     "serve": "http-server ./www/ -o -c 1 -a localhost",
