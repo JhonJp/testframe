@@ -1,0 +1,89 @@
+<template>
+<div class="page" data-name="login">
+    <div class="navbar">
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="#" class="link back">
+            <i class="icon icon-back"></i>
+            <span class="ios-only">Back</span>
+          </a>
+        </div>
+        <div class="title">Login</div>
+      </div>
+    </div>
+    <!-- start form -->
+    <div class="page-content block">
+        <div class="login-screen-title"><b>GP EXPRESS</b></div>
+        <form onsubmit="helloWorld">
+            <div class="list">
+                <ul>
+                    <li class="item-content item-input">
+                    <div class="item-inner">
+                        <div class="item-title item-label">Username</div>
+                        <div class="item-input-wrap">
+                        <input type="text" name="username" placeholder="Your username" id="usern">
+                        </div>
+                    </div>
+                    </li>
+                    <li class="item-content item-input">
+                    <div class="item-inner">
+                        <div class="item-title item-label">Password</div>
+                        <div class="item-input-wrap">
+                        <input type="password" name="password" placeholder="Your password" id="pwd">
+                        </div>
+                    </div>
+                    </li>
+                    <li class="item-content item-input">
+                        <div class="item-inner">
+                            {{#each text}}
+                            <p class="justify-content-center">
+                                {{this}}    
+                            </p>
+                            {{/each}}
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="segmented segmented-raised">
+                <a class="button button-fill color-red" @click="signUp">
+                    Sign Up
+                </a>
+                <a class="button button-fill color-blue" @click="signIn">
+                    Sign In
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+</template>
+<script>
+    var $$ = Dom7;
+return {
+    // Component Data
+    data: function () {
+    // Must return an object
+    return {
+        text: [
+          'You give us consent on the informations that you have provided during the time that you sign up in our system.',
+           ],
+      }
+    },
+    // Component Methods
+    methods: {
+    signUp: function () {
+        var self = this;
+        var usern = $$('#usern').val();
+        var pwd = $$('#pwd').val();
+        self.$app.dialog.alert('Username: '+usern+'<br> Password: '+pwd,'Login form');
+    },
+    signIn: function () {
+        var self = this;
+        var usern = $$('#usern').val();
+        var pwd = $$('#pwd').val();
+        self.$app.dialog.alert('Username: '+usern+'<br> Password: '+pwd,'Login form');
+    },
+    },
+    // Page Events
+    on: {}
+}
+</script>

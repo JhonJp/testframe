@@ -4,16 +4,12 @@ routes = [
     url: './index.html',
   },
   {
-    path: '/tabbar/',
-    url: './pages/tabbar.html',
-  },
-  {
     path: '/about/',
     componentUrl: './pages/about.html',
   },
   {
     path: '/contact/',
-    url: './pages/contact.html',
+    componentUrl: './pages/contact.html',
   },
   // Page Loaders & Router
   {
@@ -23,6 +19,10 @@ routes = [
   {
     path: '/page-loader-component/:user/:userId/:posts/:postId/',
     componentUrl: './pages/page-loader-component.html',
+  },
+  {
+    path: '/login/',
+    componentUrl: './pages/login.html',
   },
   {
     path: '/request-and-load/user/:userId/',

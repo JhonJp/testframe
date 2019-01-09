@@ -1,3 +1,4 @@
+<template>
 <div class="page" data-name="form">
   <div class="navbar">
     <div class="navbar-inner sliding">
@@ -11,65 +12,104 @@
     </div>
   </div>
   <div class="page-content">
-    <div class="card">
-        <div class="card-header">Please if you have any concerns, you may contact us with this numbers:</div>
-        <div class="card-content card-content-padding">
-            <div class="row no-gap">
-              <div class="col"><b>Abu Dhabi Hotline</b></div>
-              <div class="col">056 618 8856</div>
-            </div>
-            <div class="row no-gap">
-                <div class="col"><b>Mr Arnaldo Solomon</b></div>
-                <div class="col">050 860 1232</div>
-            </div>
-            <div class="row no-gap">
-                <div class="col"><b>Mr Arjay Reyes</b></div>
-                <div class="col">050 119 7680</div>
-            </div>
+      <div class="card data-table data-table-collapsible data-table-init">
+        <div class="card-header">
+          <div class="data-table-title">Contacts </div>
         </div>
-        <div class="card-footer"></div>
-    </div>
+        <div class="card-content">
+          <table>
+            <thead>
+              <tr>
+                <th class="label-cell"><b>Name</b></th>
+                <th class="numeric-cell"><b>Tel. Number</b></th>
+              </tr>
+            </thead>
+            <tbody>
+                {{#each names}}
+                <tr>
+                  {{this}}
+                </tr>
+                {{/each}}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    <br>
     <div class="card">
-        <div class="block-title">Feel Free to message us!</div>
-        <div class="list no-hairlines-md">
-          <ul>
-            <li class="item-content item-input">
-              <div class="item-inner">
-                <div class="item-title item-label">Name</div>
-                <div class="item-input-wrap">
-                  <input type="text" placeholder="Your name">
-                  <span class="input-clear-button"></span>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="item-content item-input">
+        <div class="card-header title card-content-padding">Feel free to message us.</div>
+        <div class="card-content card-content-padding">
+          <form>
+          <div class="list no-hairlines-md">
+            <ul>
+              <li class="item-content item-input">
                 <div class="item-inner">
-                  <div class="item-title item-label">E-mail</div>
+                  <div class="item-title item-label">Name</div>
                   <div class="item-input-wrap">
-                    <input type="email" placeholder="E-mail"/>
+                    <input type="text" placeholder="Your name" id="yourname">
+                    <span class="input-clear-button"></span>
                   </div>
                 </div>
-              </div>
-            </li>
-            <li>
-              <div class="item-content item-input">
-                <div class="item-inner">
-                  <div class="item-title item-label">Concern</div>
-                  <div class="item-input-wrap">
-                    <textarea placeholder="Please indicate your concerns here"></textarea>
+              </li>
+              <li>
+                <div class="item-content item-input">
+                  <div class="item-inner">
+                    <div class="item-title item-label">E-mail</div>
+                    <div class="item-input-wrap">
+                      <input type="email" placeholder="E-mail" id="yourmail"/>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </li>
-          </ul>
+              </li>
+              <li>
+                <div class="item-content item-input">
+                  <div class="item-inner">
+                    <div class="item-title item-label">Concern</div>
+                    <div class="item-input-wrap">
+                      <textarea placeholder="Please indicate your concerns here" id="concern"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          </form>
         </div>
         <div class="card-footer">
             <button class="button col"></button>
             <button class="button col"></button>
-            <button class="col button button-fill">Submit</button>
+            <button class="col button button-fill" @click="contactSubmit">Submit</button>
         </div>
-      </div>
+    </div>
       <!-- end list form -->
   </div>
 </div>
+</template>
+<script>
+    var $$ = Dom7;
+return {
+    // Component Data
+    data: function () {
+    // Must return an object
+    return {
+        names: [
+          '<td class=\"label-cell\">Abu Dhabi Hotline</td><td class=\"numeric-cell\">056 618 8856</td>',
+          '<td class=\"label-cell\">Mr Arnaldo Solomon</td><td class=\"numeric-cell\">050 860 1232</td>',
+          '<td class=\"label-cell\">Abu Dhabi Hotline</td><td class=\"numeric-cell\">056 618 8856</td>',
+          '<td class=\"label-cell\">Mr Arjay Reyes</td><td class=\"numeric-cell\">050 119 7680</td>',
+          '<td class=\"label-cell\">Abu Dhabi Hotline</td><td class=\"numeric-cell\">056 618 8856</td>',
+           ],
+      }
+    },
+    // Component Methods
+    methods: {
+      contactSubmit: function(){
+        var self = this;
+        var n = $$('#yourname').val();
+        var mail = $$('#yourmail').val();
+        self.$app.dialog.alert('Name: '+n+'<br> Email: '+mail,'Contact us');
+      }
+    },
+    // Page Events
+    on: {}
+}
+</script>
