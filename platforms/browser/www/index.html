@@ -19,6 +19,46 @@
   <div id="app">
     <!-- Status bar overlay for fullscreen mode-->
     <div class="statusbar"></div>
+    <!-- Left panel with cover effect-->
+    <div class="panel panel-left panel-cover theme-default">
+      <div class="view">
+        <div class="page">
+          <div class="topnav_inner">
+            <div class="topnav_inner_txt">
+                <i class="f7-icons">home</i>
+                Welcome guest!</div>
+          </div>
+          <div class="page-content">
+            <div class="block-title">Main Navigation</div>
+              <div class="list">
+                <ul>
+                  <li>
+                    <a href="/" class="item-content item-link panel-close">
+                      <div class="item-inner">
+                        <div class="item-title">Homepage</div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/about/" class="item-content item-link panel-close">
+                      <div class="item-inner">
+                        <div class="item-title">About</div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/contact/" class="item-content item-link panel-close">
+                      <div class="item-inner">
+                        <div class="item-title">Contact Us</div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Your main view, should have "view-main" class -->
     <div class="view view-main ios-edges">
       <!-- Page, data-name contains page name which can be used in callbacks -->
@@ -27,7 +67,7 @@
         <div class="navbar">
           <div class="navbar-inner">
             <div class="left">
-              <a href="/openpanel/" class="link icon-only panel-open" data-panel="left">
+              <a href="#" class="link icon-only panel-open" data-panel="left">
                 <i class="icon f7-icons ios-only">menu</i>
                 <i class="icon material-icons md-only">menu</i>
               </a>
@@ -70,7 +110,7 @@
                         </ul>
                     </div>
                     <div class="segmented segmented-raised">
-                        <a class="button button-fill color-red" id="signUp">
+                        <a href="/welcome/" class="button button-fill color-red">
                             Sign Up
                         </a>
                         <a class="button button-fill color-blue" id="signIn">

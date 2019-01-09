@@ -17,18 +17,7 @@ var app  = new Framework7({
     };
   },
   // App root methods
-  methods: {
-    signUp: function () {
-      var usern = $$('#usern').val();
-      var pwd = $$('#pwd').val();
-      app.dialog.alert('Username: '+usern+'<br> Password: '+pwd,'Login form');
-    },
-    signIn: function () {
-        var usern = $$('#usern').val();
-        var pwd = $$('#pwd').val();
-        app.dialog.alert('Username: '+usern+'<br> Password: '+pwd,'Login form');
-    },
-  },
+  methods: {},
   // App routes
   routes: routes,
 });
@@ -42,9 +31,9 @@ $$('#signUp').on('click', function () {
   var username = $$('#usern').val();
   var password = $$('#pwd').val();
   // Alert username and password
-  app.dialog.alert('Username: ' + username + '<br>Password: ' + password);
+  app.dialog.alert('Username: ' + username + '<br>Password: ' + password,'Confirmation');
   //window.open('http://google.com', '_self', 'location=no,hidden=yes,closebuttoncaption=Done,toolbar=no');
-
+  
 });
 
 $$('#signIn').on('click', function () {
@@ -52,7 +41,7 @@ $$('#signIn').on('click', function () {
   var password = $$('#pwd').val();
 
   // Alert username and password
-  app.dialog.alert('Username: ' + username + '<br>Password: ' + password);
+  app.dialog.alert('Username: ' + username + '<br>Password: ' + password,'Confirmation');
   
 });
 

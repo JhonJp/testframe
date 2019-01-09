@@ -25,7 +25,7 @@ routes = [
     componentUrl: './pages/login.html',
   },
   {
-    path: '/request-and-load/user/:userId/',
+    path: '/welcome/',
     async: function (routeTo, routeFrom, resolve, reject) {
       // Router instance
       var router = this;
@@ -42,20 +42,10 @@ routes = [
       // Simulate Ajax Request
       setTimeout(function () {
         // We got user data from request
-        var user = {
-          firstName: 'Vladimir',
-          lastName: 'Kharlampidi',
-          about: 'Hello, i am creator of Framework7! Hope you like it!',
-          links: [
-            {
-              title: 'Framework7 Website',
-              url: 'http://framework7.io',
-            },
-            {
-              title: 'Framework7 Forum',
-              url: 'http://forum.framework7.io',
-            },
-          ]
+        var data = {  
+            name:'John Doe',
+            date: 'Monday at 2:15 PM',
+            about: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sagittis tellus ut turpis condimentum, ut dignissim lacus tincidunt. Cras dolor metus, ultrices condimentum sodales sit amet, pharetra sodales eros. Phasellus vel felis tellus. Mauris rutrum ligula nec dapibus feugiat. In vel dui laoreet, commodo augue id, pulvinar lacus.',
         };
         // Hide Preloader
         app.preloader.hide();
@@ -63,11 +53,11 @@ routes = [
         // Resolve route to load page
         resolve(
           {
-            componentUrl: './pages/request-and-load.html',
+            componentUrl: './pages/contents/welcome.html',
           },
           {
             context: {
-              user: user,
+              data: data,
             }
           }
         );

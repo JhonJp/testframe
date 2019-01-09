@@ -1,0 +1,60 @@
+<template>
+<div class="page">
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="title sliding">Homepage</div>
+        </div>
+    </div>
+    <div class="page-content">
+        <div class="topnav_inner">
+            <div class="topnav_inner_txt">
+                {{data.name}}
+            </div>
+        </div>
+        <div class="list">
+            <ul>
+                <li>
+                    <a href="#" class="item-link item-content">
+                        <div class="item-inner">
+                            <div class="item-title">Track and Trace</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="item-link item-content">
+                        <div class="item-inner">
+                            <div class="item-title">Reservation</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="item-link item-content">
+                        <div class="item-inner">
+                            <div class="item-title">Booking</div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="list media-list chevron-center">
+            <ul>
+            <li>
+            <a href="#" class="item-link item-content">
+                <div class="item-inner">
+                <div class="item-title-row">
+                    <div class="item-title">{{data.name}}</div>
+                    <div class="item-after">{{data.date}}</div>
+                </div>
+                <div class="item-subtitle">New messages from {{data.name}}</div>
+                <div class="item-text">{{data.about}}</div>
+                </div>
+            </a>
+            </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</template>
+<script>
+return {}
+</script>
