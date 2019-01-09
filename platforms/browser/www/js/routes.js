@@ -4,6 +4,25 @@ routes = [
     url: './index.html',
   },
   {
+    path: '/openpanel/',
+    panel: {
+      componentUrl: './panel.html',
+      /* panel-component.html contains:
+      <template>
+        <div class="panel panel-left panel-cover">
+          <div class="view">
+            <div class="page">
+              ...
+            </div>
+          </div>
+        </div>
+      </template>
+      <style>...</style>
+      <script>...</script>
+      */
+    },
+  },
+  {
     path: '/about/',
     componentUrl: './pages/about.html',
   },
