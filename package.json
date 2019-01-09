@@ -24,9 +24,9 @@
   "author": "Von",
   "license": "",
   "bugs": {
-    "url": "https://github.com/JhonJp/myprojects/issues"
+    "url": "https://github.com/JhonJp/testframe/issues"
   },
-  "homepage": "https://github.com/JhonJp/myprojects#readme",
+  "homepage": "https://github.com/JhonJp/testframe",
   "devDependencies": {
     "cpy-cli": "^1.0.1",
     "framework7": "^3.0.0",
